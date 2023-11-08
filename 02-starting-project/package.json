@@ -11,7 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "http-server": "^14.1.0"
+    "http-server": "^14.1.0",
+    "module": "^1.2.5"
   },
   "devDependencies": {
     "happy-dom": "^2.55.0",
