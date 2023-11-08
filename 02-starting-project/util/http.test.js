@@ -28,3 +28,16 @@ it("should retrun any available response data ", () =>{
     return expect(sendDataRequest(testData)).resolves.toEqual(testResponseData);
 } )
 
+it('should convert to provided data to JSON before sending the request', async() => {
+    const testData = { key: 'test'}
+
+    let errorMessage;
+
+    try{
+        await sendDataRequest(testData)
+    }catch(err){ 
+        errorMessage = err;
+    }
+
+    expect(errorMessage).not.toBe('Not a string');
+})
